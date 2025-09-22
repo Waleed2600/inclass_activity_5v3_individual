@@ -1,16 +1,19 @@
-# pet_app
+@"
+# Digital Pet (Flutter)
 
-A new Flutter project.
+Features:
+- Name input, happiness & hunger, mood tint via ColorFiltered
+- Hunger auto-increases every 30s; win/loss logic
+- Extras: Energy bar + Activity dropdown (Play/Feed/Nap/Walk)
 
-## Getting Started
+## Run
+flutter pub get
+flutter run -d windows   # or: -d chrome
 
-This project is a starting point for a Flutter application.
+## Build APK (for submission)
+flutter build apk --release
+"@ | Out-File -Encoding UTF8 README.md
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+git add README.md
+git commit -m "Add README with run/build instructions"
+git push
